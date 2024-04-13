@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/css/main.827061cf.css",
+    "main.js": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/js/main.11f5a337.js",
+    "static/js/453.97330a74.chunk.js": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/js/453.97330a74.chunk.js",
+    "static/media/logo.svg": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/index.html",
+    "main.827061cf.css.map": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/css/main.827061cf.css.map",
+    "main.11f5a337.js.map": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/js/main.11f5a337.js.map",
+    "453.97330a74.chunk.js.map": "/%3Chttps://johantt.github.io/Ram-Resume/%3E/static/js/453.97330a74.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.827061cf.css",
+    "static/js/main.11f5a337.js"
+  ]
+}
