@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'antd';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +19,10 @@ function App() {
         >
           Learn React
         </a>
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
+        <Button type="primary">Button</Button>
       </header>
     </div>
   );
