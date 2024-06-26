@@ -1,26 +1,25 @@
 import "./App.css";
 import {
-  Avatar,
-  Button,
   Col,
   Flex,
-  Grid,
   Row,
   Space,
-  Tag,
   Typography,
 } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
   GithubOutlined,
-  LinkedinOutlined,
-  UserOutlined,
+  HomeOutlined,
+  BookOutlined,
+  TrophyOutlined,
 } from "@ant-design/icons";
-import { TrophyOutlined } from "@ant-design/icons";
+import { } from "@ant-design/icons";
 import ExperienceDivider from "./component/experience-divider.component";
 import ExperienceMark from "./component/experience-mark.component";
 import SkillsBox from "./component/skills-box.component";
+import AchievementTag from "./component/achievement-tag.component";
+import EducationBox from "./component/education-box.component";
 
 const { Title, Text } = Typography;
 
@@ -30,13 +29,13 @@ function App() {
       <section id="MyName" className="pt-10 mx-16">
         <div className="bg-[#efd318] w-[120px] h-[120px] rounded-full absolute z-0 top-12"></div>
         <div className="relative ml-7">
-          <Title className="!m-0 !font-bold z-10">Cao Viet Thang</Title>
+          <Title className="!m-0 !font-bold z-10 tracking-wide">Cao Viet Thang</Title>
         </div>
       </section>
       <div className="grid grid-cols-12 gap-y-5 mx-16">
         <div className="col-span-3 relative ml-7">
-          <Title level={4} className="!m-0 z-10 !font-[350]">
-            Junior Full-Stack Developer
+          <Title level={4} className="!m-0 z-10 !font-[350] tracking-wide">
+            Full-Stack Developer
           </Title>
         </div>
         <section id="Contact" className="col-span-9">
@@ -62,7 +61,7 @@ function App() {
                 </Text>
                 <div className="col-span-2 flex flex-col">
                   <Text className="font-semibold">Phone</Text>
-                  <Text>(+84) 0909161871</Text>
+                  <Text>(+84) 909161871</Text>
                 </div>
               </div>
             </Col>
@@ -80,11 +79,11 @@ function App() {
             <Col xs={24} sm={24} md={12} lg={6}>
               <div className="grid grid-cols-3">
                 <Text className="col-span-1 flex justify-center items-start mr-1">
-                  <LinkedinOutlined className="text-4xl pb-1 border-b-2 border-[#272822]" />
+                  <HomeOutlined className="text-4xl pb-1 border-b-2 border-[#272822]" />
                 </Text>
                 <div className="col-span-2 flex flex-col">
-                  <Text className="font-semibold">LinkedIn</Text>
-                  <Text>ThangCV9</Text>
+                  <Text className="font-semibold">Address</Text>
+                  <Text>Hoc Mon district, Ho Chi Minh City, Vietnam</Text>
                 </div>
               </div>
             </Col>
@@ -93,33 +92,34 @@ function App() {
         <Space direction="vertical" className="col-span-3 mr-8" size="large">
           <section id="AboutMe">
             <div className="flex flex-col">
-              <div className="flex items-center pl-3 relative mb-2">
-                <Title level={4} className="z-10 !mb-0">
+              <Flex>
+                <Title level={4} className="pb-2 border-b-2 border-[#272822]">
                   About
                 </Title>
-                <div className="absolute inset-x-0 bottom-[8px] h-2 bg-[#eed016] z-0 max-w-[5.2rem]"></div>
-              </div>
+              </Flex>
               <Text className="text-justify">
-                I am energetic, with excellent capacity to adapt to new
-                challenges. As an active learner and strong team player I’m able
-                to work in any diverse & fast-paced environment and also take
-                full responsibility for my own personal development. At the
-                moment I am a 2nd year student far from what I once was but not
-                yet what I'm going to be
+                As a highly energetic and approachable software developer, I thrive in collaborative environments. I excel in quickly adapting to new challenges and integrating seamlessly into diverse teams. With a strong sense of responsibility and adherence to high standards, I consistently strive to deliver high-quality results. My enthusiasm for technology drives me to stay updated and continuously learn new skills. With a passion for my work and a commitment to teamwork, I consistently strive to deliver high-quality results.
               </Text>
             </div>
           </section>
           <section id="Award&Honor">
-            <Flex>
-              <Title level={4} className="pb-2 border-b-2 border-[#272822]">
+            <div className="flex items-center pl-3 relative mb-2">
+              <Title level={4} className="z-10 !mb-0">
                 Award & Honor
               </Title>
-            </Flex>
+              <div className="absolute inset-x-0 bottom-[8px] h-2 bg-[#eed016] z-0 max-w-[10.5rem]"></div>
+            </div>
             <Flex vertical>
-              <Text>Major: Information Technology (SoftWare Engineering)</Text>
-              <Text>GPA: 3.4</Text>
-              <Text>At: HCMC University of Education</Text>
-              <Text>Year of Experience: 1+</Text>
+              <AchievementTag
+                icon={<BookOutlined />}
+                title="HCM University Of Education - Jul 2024"
+                description="Graduated with very good in Software Engineering"
+              />
+              <AchievementTag
+                icon={<TrophyOutlined />}
+                title="E-Fox Portal - Jan 2024"
+                description="Project Excellence Award 2023"
+              />
             </Flex>
           </section>
         </Space>
@@ -143,7 +143,7 @@ function App() {
                 courseName="Management Platform"
                 courseTime="04.2024 - Present"
                 role="Full-Stack Developer"
-                mainResponsibilities="This initiative involves enhancing future versions of the project. My main responsibility is to understand the existing source code and devise optimal methods for migrating from the MVC model to a React application. I am tasked with rebuilding and improving the entire user interface while preserving the distinctive characteristics of the product, ultimately enhancing the user experience. Additionally, I am responsible for establishing clear directory structures and component division to facilitate seamless future development."
+                mainResponsibilities="I'm tasked with rebuilding and improving the entire user interface while preserving the distinctive characteristics of the product, ultimately enhancing the user experience and establishing clear directory structures and component division to facilitate seamless future development. Additionally, I flexibly participated in supporting and developing project version functionalities, ensuring that all previous tasks were completed and that the project was delivered on time."
                 technologies={
                   <ul className="!mb-0">
                     <li>
@@ -160,9 +160,9 @@ function App() {
                 companyName="ISC Center of FPT Telecom"
                 projectName="E-Fox Portal."
                 courseName="Online Training Portal"
-                courseTime="06.2023 - Present"
+                courseTime="06.2023 - 6.2024"
                 role="Full-Stack Developer"
-                mainResponsibilities="As a full-stack developer in a large company, my primary responsibilities involve working on a truly extensive project that has undergone several development iterations. Firstly, I immerse myself in understanding the source code, grasping the project's processes, and comprehending its business rules thoroughly. I Take responsibility for key application functionalities, ranging from building APIs to creating UI components to display and populate data, always ensuring optimal performance and minimizing potential issues. I actively participate in all stages of the project development lifecycle, including analysis, design, development, testing, deployment, and maintenance. Through three version of development, I have been entrusted with and successfully delivered assigned functionalities, consistently meeting expectations."
+                mainResponsibilities="I take responsibility for key application functionalities, ranging from building APIs to creating UI components to display and populate data, always ensuring optimal performance and minimizing potential issues. I actively participate in all stages of the project development lifecycle, including analysis, design, development, testing, deployment, and maintenance. Through three version of development, I have successfully delivered assigned functionalities, customizing libraries to improve user experience, consistently meeting expectations."
                 technologies={
                   <ul className="!mb-0">
                     <li>
@@ -187,16 +187,6 @@ function App() {
                 }
                 description="An online training portal designed for internal employees of FPT system, providing a wide range of courses, study schedules, quizzes, exams, assignments, study materials, and other relevant information. Additionally, it includes a management system for Head of Training to oversee students, instructors, and classes."
               >
-                <Text>
-                  <Tag
-                    color="#6C0345"
-                    bordered={false}
-                    className="font-medium mr-1 text-[13px]"
-                  >
-                    <TrophyOutlined /> Achievement:
-                  </Tag>
-                  Project Excellence Award 2023.
-                </Text>
               </ExperienceMark>
               {/* Internship Stage */}
               {/* <ExperienceDivider title="Internship Experience" /> */}
@@ -225,7 +215,7 @@ function App() {
               ></ExperienceMark>
               {/* Outstanding Course Projects */}
               {/* <ExperienceDivider title="Outstanding Course Projects" /> */}
-              <ExperienceMark
+              {/* <ExperienceMark
                 companyName="Collegiate"
                 projectName="Mercedes ECommerce Center."
                 courseName="Ecommerce"
@@ -253,7 +243,7 @@ function App() {
                   </ul>
                 }
                 description="This is a large project with numerous requirements that need to be fulfilled for it to function as a full-fledged e-commerce website, including buying, payment processing, invoicing, etc. It also involves implementing the latest technologies and self-hosting the website on a platform."
-              />
+              /> */}
               {/* <ExperienceMark
             companyName="CodeFest"
             projectName="RPG-Game."
@@ -301,23 +291,21 @@ function App() {
             </div>
             <SkillsBox
               mainSkills={[
-                "React",
-                "Angular",
-                "ASP.NET Core",
-                "Advanced Github",
-                "Logic Thinking",
-                "Teamwork",
-                "Problem Solving",
-                "Critical Thinking",
-                "English Communication",
+                "User Interface",
+                "User Experience",
+                "Object Oriented",
+                "Design Methods",
+                "Patterns",
+                "Development Tools",
+                "Code Review",
+                "Debugging Methods",
               ]}
               solfSkills={[
-                "Teamwork",
-                "Planning",
-                "Attention to Detail",
-                "Problem Solving",
-                "Critical Thinking",
-                "English Communication",
+                "Self-Learning",
+                "Second Brain",
+                "Problem solving",
+                "Presentation",
+                "Second Language",
               ]}
             />
           </section>
@@ -330,14 +318,14 @@ function App() {
                 Education
               </Title>
             </div>
-            <Text className="col-span-7 text-justify">
-              I am energetic, with excellent capacity to adapt to new
-              challenges. As an active learner and strong team player I’m able
-              to work in any diverse & fast-paced environment and also take full
-              responsibility for my own personal development. At the moment I am
-              a 2nd year student far from what I once was but not yet what I'm
-              going to be
-            </Text>
+            <Space direction="horizontal" className="mb-3">
+              <EducationBox courseName="Ecommerce Collegiate" projectName="Mercedes ECommerce Center" courseTime="07.2023 - 08.2023" />
+              <EducationBox courseName="Game UIT Hackathon 2022 CodeFest" projectName="RPG-Game (New Hope)" courseTime="26.11.2022 - 27.11.2022" />
+              <EducationBox courseName="Web Programming Collegiate" projectName="E-Learning Website" courseTime="02.2022 - 05.2022" />
+            </Space>
+            <Space direction="horizontal">
+              <EducationBox courseName="HCM University Of Education" projectName="Information Technology - Major: Software Engineering" courseTime="2020 - 2024 - Ho Chi Minh City, VietNam" />
+            </Space>
           </section>
         </Space>
       </div>
