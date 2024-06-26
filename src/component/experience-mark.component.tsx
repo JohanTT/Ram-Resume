@@ -1,4 +1,4 @@
-import { Col, Flex, Row, Tag, Typography } from "antd";
+import { Col, Collapse, Flex, Row, Space, Tag, Typography } from "antd";
 import { EnvironmentOutlined } from "@ant-design/icons";
 
 interface ExperienceMarkProps {
@@ -27,8 +27,8 @@ export default function ExperienceMark(
     description,
   } = props;
   return (
-    <div className="grid grid-cols-9 !text-justify">
-      <div className="col-span-2 py-4">
+    <div className="grid grid-cols-10 !text-justify">
+      <div className="col-span-3">
         <div className="flex flex-col gap-1">
           <Flex>
             <div className="flex items-center relative">
@@ -75,30 +75,42 @@ export default function ExperienceMark(
           <Text>{courseTime}</Text>
         </div>
       </div>
-      <div className="col-span-7 py-4">
-        <div className="flex flex-col">
+      <div className="col-span-7">
+        <Space className="flex flex-col" direction="vertical">
           <Text>
             <span className="font-medium">Main responsibilities: </span>
             {mainResponsibilities}
           </Text>
-          <Row gutter={16} className="flex m-2 py-2 justify-between">
-            <Col span={11}>
-              <Text>
-                <span className="font-medium">Technologies used: </span>
-                {technologies}
-              </Text>
-            </Col>
-            <div className="col-span-1 border-l-2 border-[#E25E3E]"></div>
-            <Col span={11}>
-              <Text>
-                <span className="font-medium">Description: </span>
-                {description}
-              </Text>
-            </Col>
-          </Row>
           {props.children}
-        </div>
+        </Space>
       </div>
+      <Row gutter={16} className="col-span-10 flex m-2 py-2 justify-between">
+        <Col span={11}>
+          <Collapse
+            bordered={false}
+            items={[
+              {
+                key: "1",
+                label: <span className="font-medium">Technologies used</span>,
+                children: <Text>{technologies}</Text>,
+              },
+            ]}
+          />
+        </Col>
+        <div className="col-span-1 border-l-2 border-[#E25E3E]"></div>
+        <Col span={11}>
+          <Collapse
+            bordered={false}
+            items={[
+              {
+                key: "1",
+                label: <span className="font-medium">App description</span>,
+                children: <Text>{description}</Text>,
+              },
+            ]}
+          />
+        </Col>
+      </Row>
     </div>
   );
 }
