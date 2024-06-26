@@ -70,9 +70,9 @@ export default function ExperienceMark(
               <EnvironmentOutlined /> {companyName}
             </Tag>
           </Flex>
-          <Text className="font-medium">{projectName}</Text>
-          <Text>{courseName}</Text>
-          <Text>{courseTime}</Text>
+          <Text className="font-semibold">{projectName}</Text>
+          <Text className="font-medium">{courseName}</Text>
+          <Text className="text-gray-500">{courseTime}</Text>
         </div>
       </div>
       <div className="col-span-7">
