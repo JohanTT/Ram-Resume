@@ -13,20 +13,22 @@ export default function SkillsBox(props: SkillsBoxProps) {
         {mainSkills.map((skill) => (
           <Button
             size="large"
-            className="font-semibold bg-[#E25E3E] text-[#fff] border-0 rounded flex-grow"
+            className="font-semibold bg-[#E25E3E] text-[#fff] border-0 rounded flex-grow hover:!bg-[#6C0345] hover:!text-[#fff]"
           >
             {skill}
           </Button>
         ))}
       </Flex>
       <Flex wrap="wrap" className="gap-y-2 rounded" align="center">
-        {solfSkills.map((skill) => (
+        {solfSkills.map((skill, index) => (
           <Button
             size="large"
-            className="relative font-semibold text-[#fff] bg-[#E25E3E] flex-grow rounded-none border-0"
+            className={`relative font-semibold text-[#fff] bg-[#E25E3E] flex-grow rounded-none border-0 hover:!bg-[#6C0345] hover:!text-[#fff] 
+              ${index === 0 ? 'rounded-l' : ''} ${index === solfSkills.length - 1 ? 'rounded-r' : ''}`}
           >
             {skill}
-            <span className="absolute inset-y-0 left-0 bg-[#fff] w-[1px] h-2/3" />
+            {/* First and last element will not have the divider */}
+            {index === 0 || index === solfSkills.length ? '' : <span className="absolute left-0 bg-[#fff] w-[2px] h-2/3" />}
           </Button>
         ))}
       </Flex>
