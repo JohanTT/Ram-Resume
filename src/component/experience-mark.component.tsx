@@ -87,6 +87,7 @@ export default function ExperienceMark(
       <Row gutter={16} className="col-span-10 flex m-2 py-2 justify-between">
         <Col span={11}>
           <Collapse
+            defaultActiveKey={["1"]}
             bordered={false}
             items={[
               {
@@ -100,6 +101,7 @@ export default function ExperienceMark(
         <div className="col-span-1 border-l-2 border-[#E25E3E]"></div>
         <Col span={11}>
           <Collapse
+            defaultActiveKey={["1"]}
             bordered={false}
             items={[
               {
