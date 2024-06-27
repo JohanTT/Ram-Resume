@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  Col,
-  Flex,
-  Row,
-  Space,
-  Typography,
-} from "antd";
+import { Col, Divider, Flex, Row, Space, Typography } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
@@ -14,7 +8,7 @@ import {
   BookOutlined,
   TrophyOutlined,
 } from "@ant-design/icons";
-import { } from "@ant-design/icons";
+import {} from "@ant-design/icons";
 import ExperienceDivider from "./component/experience-divider.component";
 import ExperienceMark from "./component/experience-mark.component";
 import SkillsBox from "./component/skills-box.component";
@@ -29,7 +23,9 @@ function App() {
       <section id="MyName" className="pt-10 mx-16">
         <div className="bg-[#efd318] w-[120px] h-[120px] rounded-full absolute z-0 top-12"></div>
         <div className="relative ml-7">
-          <Title className="!m-0 !font-bold z-10 tracking-wide">Cao Viet Thang</Title>
+          <Title className="!m-0 !font-bold z-10 tracking-wide">
+            Cao Viet Thang
+          </Title>
         </div>
       </section>
       <div className="grid grid-cols-12 gap-y-5 mx-16">
@@ -98,7 +94,15 @@ function App() {
                 </Title>
               </Flex>
               <Text className="text-justify">
-                As a highly energetic and approachable software developer, I thrive in collaborative environments. I excel in quickly adapting to new challenges and integrating seamlessly into diverse teams. With a strong sense of responsibility and adherence to high standards, I consistently strive to deliver high-quality results. My enthusiasm for technology drives me to stay updated and continuously learn new skills. With a passion for my work and a commitment to teamwork, I consistently strive to deliver high-quality results.
+                As a highly energetic and approachable software developer, I
+                thrive in collaborative environments. I excel in quickly
+                adapting to new challenges and integrating seamlessly into
+                diverse teams. With a strong sense of responsibility and
+                adherence to high standards, I consistently strive to deliver
+                high-quality results. My enthusiasm for technology drives me to
+                stay updated and continuously learn new skills. With a passion
+                for my work and a commitment to teamwork, I consistently strive
+                to deliver high-quality results.
               </Text>
             </div>
           </section>
@@ -148,8 +152,30 @@ function App() {
                   <ul className="!mb-0">
                     <li>
                       <Text>
-                        Front-end: React, TypeScript, Ant Design, Tailwind CSS,
-                        Redux/Redus Toolkit, Plugin Eslint, Craco.
+                        <span className="font-medium">Refactor Front-end:</span>{" "}
+                        React, TypeScript, Ant Design, Tailwind CSS, Redux/Redus
+                        Toolkit, Plugin Eslint, Craco.
+                      </Text>
+                    </li>
+                    <Divider className="m-[10px]" />
+                    <li>
+                      <Text>
+                        <span className="font-medium">Database:</span> OracleDB,
+                        Redis Cache.
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        <span className="font-medium">Back-end:</span>{" "}
+                        Repository & UoW Pattern, ASP.NET Core, Quartz.net
+                        Background Jobs, LinQ, Dapper, Lambda, MyBatis, C#, JWT,
+                        Swagger, Kibana, Kubernetes, .Net 8 Syntax.
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        <span className="font-medium">Front-end:</span> MVC,
+                        HTML, CSS, JavaScript, JQuery, Kendo, Bootstrap.
                       </Text>
                     </li>
                   </ul>
@@ -167,27 +193,28 @@ function App() {
                   <ul className="!mb-0">
                     <li>
                       <Text>
-                        Database: Microsoft SQL Server, Stored Procedure, Redis
-                        Cache.
+                        <span className="font-medium">Database:</span> Microsoft
+                        SQL Server, Stored Procedure, Redis Cache.
                       </Text>
                     </li>
                     <li>
                       <Text>
-                        Back-end: Repository & UoW Pattern, Microservice
-                        Architecture, ABP Framework, ASP.NET Core, Background
-                        Jobs & Worker .NET, C#, LinQ.
+                        <span className="font-medium">Back-end:</span>{" "}
+                        Repository & UoW Pattern, Microservice Architecture, ABP
+                        Framework, ASP.NET Core, Kibana, Kubernetes, Background
+                        Jobs & Worker .NET, C#, LinQ, Swagger, .Net 8 Syntax.
                       </Text>
                     </li>
                     <li>
                       <Text>
-                        Front-end: Angular, TypeScript, HTML, CSS, Bootstrap.
+                        <span className="font-medium">Front-end:</span> Angular,
+                        TypeScript, HTML, CSS, Bootstrap.
                       </Text>
                     </li>
                   </ul>
                 }
                 description="An online training portal designed for internal employees of FPT system, providing a wide range of courses, study schedules, quizzes, exams, assignments, study materials, and other relevant information. Additionally, it includes a management system for Head of Training to oversee students, instructors, and classes."
-              >
-              </ExperienceMark>
+              ></ExperienceMark>
               {/* Internship Stage */}
               {/* <ExperienceDivider title="Internship Experience" /> */}
               <ExperienceMark
@@ -200,13 +227,16 @@ function App() {
                 technologies={
                   <ul className="!mb-0">
                     <li>
-                      <Text>Database: MongoDB Atlas, Spring Data JPA.</Text>
+                      <Text>
+                        <span className="font-medium">Database:</span> MongoDB
+                        Atlas, Spring Data JPA.
+                      </Text>
                     </li>
                     <li>
                       <Text>
-                        Back-end: Spring Boots Framework, Apache Maven, Eclipse
-                        IDE, Firebase Cloud Messaging, Spring Multipart File,
-                        Java.
+                        <span className="font-medium">Back-end:</span> Spring
+                        Boots Framework, Apache Maven, Eclipse IDE, Firebase
+                        Cloud Messaging, Spring Multipart File, Java.
                       </Text>
                     </li>
                   </ul>
@@ -319,12 +349,28 @@ function App() {
               </Title>
             </div>
             <Space direction="horizontal" className="mb-3">
-              <EducationBox courseName="Ecommerce Collegiate" projectName="Mercedes ECommerce Center" courseTime="07.2023 - 08.2023" />
-              <EducationBox courseName="Game UIT Hackathon 2022 CodeFest" projectName="RPG-Game (New Hope)" courseTime="26.11.2022 - 27.11.2022" />
-              <EducationBox courseName="Web Programming Collegiate" projectName="E-Learning Website" courseTime="02.2022 - 05.2022" />
+              <EducationBox
+                courseName="Ecommerce Collegiate"
+                projectName="Mercedes ECommerce Center"
+                courseTime="07.2023 - 08.2023"
+              />
+              <EducationBox
+                courseName="Game UIT Hackathon 2022 CodeFest"
+                projectName="RPG-Game (New Hope)"
+                courseTime="26.11.2022 - 27.11.2022"
+              />
+              <EducationBox
+                courseName="Web Programming Collegiate"
+                projectName="E-Learning Website"
+                courseTime="02.2022 - 05.2022"
+              />
             </Space>
             <Space direction="horizontal">
-              <EducationBox courseName="HCM University Of Education" projectName="Information Technology - Major: Software Engineering" courseTime="2020 - 2024 - Ho Chi Minh City, VietNam" />
+              <EducationBox
+                courseName="HCM University Of Education"
+                projectName="Information Technology - Major: Software Engineering"
+                courseTime="2020 - 2024 - Ho Chi Minh City, VietNam"
+              />
             </Space>
           </section>
         </Space>
